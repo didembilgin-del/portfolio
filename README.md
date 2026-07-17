@@ -12,4 +12,3 @@ This repository contains a selection of published writing, editing, localization
 - AI-assisted Content Review
 
 ## Portfolio
-📄 See the portfolio PDF in this repository.
