@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A. Didem Bilgin — Selected Editorial & Content Work</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c1b19;
+    --paper:#f1ecdd;
+    --paper-dim:#e7e0cd;
+    --red:#b8382a;
+    --teal:#2f5d62;
+    --line:#c9c0a6;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--ink);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{
+    max-width:880px;
+    margin:0 auto;
+    background:var(--paper);
+    background-image:
+      repeating-linear-gradient(180deg, transparent, transparent 34px, rgba(28,27,25,0.025) 35px);
+    min-height:100vh;
+    box-shadow:0 0 80px rgba(0,0,0,0.5);
+  }
+
+  /* MASTHEAD */
+  .masthead{
+    padding:56px 64px 28px;
+    border-bottom:3px solid var(--ink);
+    position:relative;
+  }
+  .kicker{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--red);
+    margin-bottom:14px;
+    display:flex;
+    gap:10px;
+    align-items:center;
+  }
+  .kicker::before{
+    content:"";
+    width:22px;height:1px;background:var(--red);
+    display:inline-block;
+  }
+  h1{
+    font-family:'Fraunces', serif;
+    font-optical-sizing:auto;
+    font-weight:600;
+    font-size:clamp(40px,6vw,64px);
+    line-height:0.98;
+    margin:0 0 18px;
+    letter-spacing:-0.01em;
+  }
+  .role{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:400;
+    font-size:19px;
+    color:#4a463c;
+    max-width:560px;
+    line-height:1.5;
+    margin-bottom:22px;
+  }
+  .contact-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    color:var(--ink);
+  }
+  .contact-row a{color:var(--ink); text-decoration:none; border-bottom:1px solid var(--red);}
+  .contact-row a:hover{color:var(--red);}
+
+  .lede{
+    padding:26px 64px 40px;
+    border-bottom:1px solid var(--line);
+  }
+  .lede p{
+    font-size:16px;
+    line-height:1.75;
+    max-width:640px;
+    margin:0;
+    color:#2c2a25;
+  }
+  .lede .mark{
+    background:linear-gradient(180deg, transparent 60%, rgba(184,56,42,0.18) 60%);
+  }
+
+  /* SECTION STRUCTURE */
+  section.block{
+    padding:44px 64px;
+    border-bottom:1px solid var(--line);
+  }
+  section.block:last-of-type{border-bottom:none;}
+
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    gap:16px;
+    margin-bottom:8px;
+    flex-wrap:wrap;
+  }
+  .section-head h2{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:26px;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  .tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:10.5px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--teal);
+    border:1px solid var(--teal);
+    border-radius:2px;
+    padding:2px 8px;
+  }
+  .section-sub{
+    font-size:14.5px;
+    color:#5b5647;
+    line-height:1.6;
+    max-width:600px;
+    margin:10px 0 24px;
+  }
+
+  /* ARTICLE ROWS — editing-proof style */
+  .article{
+    display:grid;
+    grid-template-columns:26px 1fr;
+    gap:14px;
+    padding:14px 0;
+    border-top:1px dashed var(--line);
+  }
+  .article:first-of-type{border-top:none;}
+  .article .mk{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    color:var(--red);
+    padding-top:3px;
+  }
+  .article a.title{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:17px;
+    color:var(--ink);
+    text-decoration:none;
+    display:inline-block;
+    line-height:1.4;
+    border-bottom:1px solid transparent;
+  }
+  .article a.title:hover{border-bottom:1px solid var(--red); color:var(--red);}
+  .article .kind{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    color:#7a7566;
+    margin-top:4px;
+    display:block;
+  }
+
+  .archive-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:18px;
+  }
+  .archive-row a{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    text-decoration:none;
+    color:var(--ink);
+    background:var(--paper-dim);
+    border:1px solid var(--line);
+    padding:7px 12px;
+    border-radius:3px;
+    transition:all .15s ease;
+  }
+  .archive-row a:hover{border-color:var(--red); color:var(--red);}
+
+  .flow-text{
+    font-size:15.5px;
+    line-height:1.75;
+    color:#2c2a25;
+    max-width:640px;
+    margin:0 0 18px;
+  }
+  .flow-text a{color:var(--teal); text-decoration:underline; text-decoration-color:rgba(47,93,98,0.4);}
+  .flow-text a:hover{color:var(--red);}
+
+  .note{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    color:#8a8471;
+    font-style:normal;
+    margin-top:4px;
+  }
+
+  /* FOOTER */
+  footer{
+    padding:40px 64px 56px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    flex-wrap:wrap;
+    gap:16px;
+  }
+  footer .stamp{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-size:15px;
+    color:#5b5647;
+  }
+  footer .loc{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--ink);
+  }
+
+  @media (max-width:600px){
+    .masthead, .lede, section.block, footer{padding-left:24px; padding-right:24px;}
+    h1{font-size:38px;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="masthead">
+    <div class="kicker">Selected Editorial & Content Work</div>
+    <h1>A. Didem Bilgin</h1>
+    <div class="role">Editor, writer, and translator — bringing writing, editing, and cross-cultural judgment to any project.</div>
+    <div class="contact-row">
+      <a href="mailto:didembilgin@gmail.com">didembilgin@gmail.com</a>
+      <a href="https://linkedin.com/in/didembilgin" target="_blank" rel="noopener">linkedin.com/in/didembilgin</a>
+      <span style="color:#7a7566;">Istanbul, Turkey</span>
+    </div>
+  </div>
+
+  <div class="lede">
+    <p>The samples below are <span class="mark">published, bylined editorial and translation work.</span> They reflect the writing, editing, and cross-cultural judgment I bring to any project, and two of them were delivered fully remotely with international teams.</p>
+  </div>
+
+  <section class="block">
+    <div class="section-head">
+      <h2>Culture.pl Turkey</h2>
+      <span class="tag">PL → TR</span>
+    </div>
+    <div class="section-sub">Editorial direction, writing, and translation for the Turkish edition of Culture.pl, an award-winning cultural platform (Golden Spider Award) run by the Adam Mickiewicz Institute. Work delivered fully remotely in direct collaboration with the Institute's team in Poland.</div>
+
+    <div class="article">
+      <span class="mk">01</span>
+      <div>
+        <a class="title" href="https://culture.pl/tr/article/bir-polonya-klasigi-sut-bari-proletaryarestoranlari" target="_blank" rel="noopener">A Polish Classic, the "Milk Bar": Restaurants of the Proletariat</a>
+        <span class="kind">original feature — written and researched</span>
+      </div>
+    </div>
+    <div class="article">
+      <span class="mk">02</span>
+      <div>
+        <a class="title" href="https://culture.pl/tr/article/turkiye-ve-polonyadaki-azinlik-dillerine-kisabakis" target="_blank" rel="noopener">A Brief Look at Minority Languages in Turkey and Poland</a>
+        <span class="kind">original comparative feature</span>
+      </div>
+    </div>
+    <div class="article">
+      <span class="mk">03</span>
+      <div>
+        <a class="title" href="https://culture.pl/tr/article/beatnikler-ve-otesi-alternatif-bir-krakow-rehberi" target="_blank" rel="noopener">Beatniks and Beyond: An Alternative Guide to Kraków</a>
+        <span class="kind">translated and edited</span>
+      </div>
+    </div>
+    <div class="article">
+      <span class="mk">04</span>
+      <div>
+        <a class="title" href="https://culture.pl/tr/article/yass-kirli-ve-ofkeli-caz" target="_blank" rel="noopener">Raw and Rebellious: Jazz on the Edge</a>
+        <span class="kind">translated and edited</span>
+      </div>
+    </div>
+    <div class="article">
+      <span class="mk">05</span>
+      <div>
+        <a class="title" href="https://culture.pl/tr/article/dunya-mimarisi-eski-cozumlerlegelecek-insa-etmek" target="_blank" rel="noopener">World Architecture: Building the Future with Ancient Solutions</a>
+        <span class="kind">translated and edited</span>
+      </div>
+    </div>
+
+    <div class="archive-row">
+      <a href="https://culture.pl/tr/topic/festival" target="_blank" rel="noopener">Festival — archive</a>
+      <a href="https://culture.pl/tr/topic/mimari" target="_blank" rel="noopener">Architecture — archive</a>
+      <a href="https://culture.pl/tr/topic/tiyatro" target="_blank" rel="noopener">Theatre — archive</a>
+      <a href="https://culture.pl/tr/topic/tasarim" target="_blank" rel="noopener">Design — archive</a>
+      <a href="https://culture.pl/tr/topic/gorsel-sanatlar" target="_blank" rel="noopener">Visual Arts — archive</a>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="section-head">
+      <h2>OKUYAY Platform</h2>
+      <span class="tag">Turkish Publishers Association · EU-Funded</span>
+    </div>
+    <div class="section-sub">Editorial oversight for all publications produced under this EU-funded public reading-culture initiative, including booklets, guides, and reports.</div>
+    <p class="flow-text">
+      <a href="http://okuyayplatformu.com/category/yayinlar/" target="_blank" rel="noopener">Publications Archive</a> — full archive of publications produced under editorial oversight.<br>
+      <a href="http://okuyayplatformu.com/yayinlar/kitapciklar/okuma-kulturu-kiti" target="_blank" rel="noopener">Reading Culture Kit</a> — sample booklet.
+    </p>
+  </section>
+
+  <section class="block">
+    <div class="section-head">
+      <h2>Creative Direction & Visual Collaboration</h2>
+    </div>
+    <p class="flow-text">While not a designer myself, I've directed and briefed graphic designers and photographers throughout my career, across magazine publishing, agency work, and my current role at Sabancı University, where visual output is a constant part of institutional communication.</p>
+    <div class="article" style="border-top:none; padding-top:0;">
+      <span class="mk">→</span>
+      <div>
+        <a class="title" href="http://okuyayplatformu.com/wp-content/uploads/2020/12/OkumaKültürü_Poster_680x480mm.pdf" target="_blank" rel="noopener">Reading Culture Poster (OKUYAY Platform)</a>
+        <span class="kind">concept, brief, and content were mine; directed the designer through to final artwork</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="section-head">
+      <h2>Professional Translation Profile</h2>
+    </div>
+    <p class="flow-text">Active CAT-tool marketplace profile listing translation work delivered for corporate clients.<br>
+      <a href="https://smartcat.com/marketplace/user/didem-bilgin" target="_blank" rel="noopener">SmartCat Marketplace Profile</a>
+    </p>
+  </section>
+
+  <section class="block">
+    <div class="section-head">
+      <h2>Remote, International Collaboration</h2>
+    </div>
+    <p class="flow-text">
+      <strong>Otokoç — Zipcar Turkey:</strong> served as Localization Reviewer for the Zipcar Turkey launch, working directly with Zipcar's London office and Otokoç's marketing team, fully remotely. Owned the localization strategy, review, and testing across the website, mobile app, and print and digital materials, ensuring linguistic accuracy and brand consistency across every touchpoint.
+      <span class="note">(Zipcar exited the Turkish market in 2024, so the live site is no longer available.)</span>
+    </p>
+    <p class="flow-text">
+      <strong>Culture.pl Turkey:</strong> delivered editorial and translation work remotely, working directly with the Adam Mickiewicz Institute team based in Poland.
+    </p>
+  </section>
+
+  <footer>
+    <div class="stamp">"Bridging languages begins with listening."</div>
+    <div class="loc">Istanbul, Turkey</div>
+  </footer>
+
+</div>
+</body>
+</html>
